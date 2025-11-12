@@ -1,0 +1,55 @@
+/* Glassmorphism and animated shine for homepage intro */
+.homepage-intro {
+  position: relative;
+  background: rgba(255,255,255,0.18);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12), 0 1.5px 8px rgba(0,0,0,0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255,255,255,0.22);
+  padding: 2em 1.5em;
+  margin: 2em 0 2.5em 0;
+  z-index: 2;
+  overflow: hidden;
+}
+
+.homepage-intro::before {
+  content: '';
+  position: absolute;
+  top: -60%;
+  left: -60%;
+  width: 120%;
+  height: 120%;
+  pointer-events: none;
+  background: linear-gradient(120deg, rgba(255,255,255,0.04) 0%, rgba(255,255,255,0.22) 50%, rgba(255,255,255,0.04) 100%);
+  filter: blur(8px);
+  opacity: 0.7;
+  border-radius: inherit;
+  animation: diagonal-shine-sweep 3.5s linear infinite;
+  z-index: 1;
+}
+
+@keyframes diagonal-shine-sweep {
+  0% { transform: translateX(-30%) translateY(-30%) rotate(0deg); }
+  100% { transform: translateX(30%) translateY(30%) rotate(1deg); }
+}
+
+.glow-animated-text {
+  color: #38bdf8;
+  background: linear-gradient(90deg, #38bdf8 0%, #06b6d4 40%, #67e8f9 70%, #fff 100%);
+  background-size: 300% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0 0 16px #38bdf8, 0 0 32px #67e8f9, 0 0 48px #fff;
+  animation: intro-glow-motion 3.5s linear infinite;
+}
+
+@keyframes intro-glow-motion {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 300% 50%;
+  }
+}
