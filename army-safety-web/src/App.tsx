@@ -1,6 +1,6 @@
 // import React from 'react'; // Not needed for React 17+ with JSX transform
 import logo from './assets/Screenshot 2025-03-13 031750.png';
-import './robotic-home.css';
+import './App.css';
 import photo1 from './assets/1.jpeg';
 import photo2 from './assets/2.jpeg';
 import photo3 from './assets/3.jpeg';
@@ -52,15 +52,16 @@ function App() {
           />
         ))}
       </div>
-  <header className="homepage-intro" style={{ textAlign: 'center', position: 'relative', zIndex: 1, width: '100%', maxWidth: 900, margin: '0 auto' }}>
-    <img src={logo} alt="Army Safety Group Logo" style={{ height: 80, marginBottom: 16, borderRadius: 8, boxShadow: '0 2px 8px #0002', background: '#fff', padding: 8 }} />
+                                                                                                                               <header className="homepage-intro">
+ 
+  <img src={logo} alt="Army Safety Group Logo" />
     <h1 style={{ margin: 0, fontSize: '2.5rem', color: '#f8f6f2' }}>Army Safety Group</h1>
     <p style={{ fontSize: '1.2rem', marginTop: '1rem', color: '#f8f6f2' }}>
       Security, Guarding, and Money Transfers
     </p>
   </header>
 
-  <main className="homepage-intro" style={{ maxWidth: 900, width: '100%', color: '#222', position: 'relative', zIndex: 2 }}>
+  <main className="homepage-intro">
         <section style={{ marginBottom: '2rem' }}>
           <h2 style={{ color: '#1a2a4e' }}>Our Mission</h2>
           <p>
