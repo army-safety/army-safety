@@ -1,3 +1,49 @@
+/* Responsive nav bar for mobile portrait */
+@media (max-width: 600px) and (orientation: portrait) {
+  nav {
+    flex-direction: column !important;
+    gap: 0.7rem !important;
+    font-size: 1rem !important;
+    margin-right: 0 !important;
+    align-items: flex-start !important;
+    padding: 0.5em 0.2em;
+  }
+  nav a, .services-dropdown {
+    font-size: 1rem !important;
+    padding: 0.4em 0.2em !important;
+    min-width: 100px !important;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+/* Responsive design for portrait mobile devices */
+@media (max-width: 600px) and (orientation: portrait) {
+  .homepage-intro {
+    padding: 1em 0.5em;
+    margin: 1em 0 1.5em 0;
+    border-radius: 12px;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.10), 0 1px 4px rgba(0,0,0,0.06);
+    font-size: 1rem;
+    max-width: 98vw;
+  }
+  .homepage-intro img {
+    height: 60px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    padding: 2px;
+  }
+  .glass-feature-container {
+    padding: 1em 0.5em;
+    border-radius: 12px;
+    font-size: 1rem;
+  }
+  h2, h1 {
+    font-size: 1.2rem !important;
+  }
+  ul, p {
+    font-size: 1rem !important;
+  }
+}
 /* Glassmorphism and animated shine for homepage intro */
 .homepage-intro {
   position: relative;
