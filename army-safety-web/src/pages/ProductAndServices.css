@@ -1,0 +1,11 @@
+/* ProductAndServices page styles */
+.product-services-container {
+  padding: 2em;
+}
+.services-dropdown {
+  margin: 1em 0;
+  padding: 0.5em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
