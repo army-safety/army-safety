@@ -2,7 +2,7 @@ import React from 'react';
 import './CompanyHistory.css';
 
 const CompanyHistory: React.FC = () => (
-  <section>
+  <div className="glass-feature-container">
     <h2>Company History & Key Milestones</h2>
       <p>SECHIVE was founded with the mission of providing top-tier security solutions tailored to the evolving needs of businesses, institutions, and individuals. Recognizing the growing demand for professional and technology-driven security services, the company was established to bridge the gap between traditional security practices and modern, innovative security strategies.</p>
     <h3>Key Milestones:</h3>
@@ -10,7 +10,7 @@ const CompanyHistory: React.FC = () => (
       <li>2019: Officially licensed by the Ministry of Interior</li>
       {/* Add more milestones as needed */}
     </ul>
-  </section>
+  </div>
 );
 
 export default CompanyHistory;

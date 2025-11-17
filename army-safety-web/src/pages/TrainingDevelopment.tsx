@@ -2,7 +2,7 @@ import React from 'react';
 import './TrainingDevelopment.css';
 
 const TrainingDevelopment: React.FC = () => (
-  <section>
+  <div className="glass-feature-container">
     <h2>Continuous Training & Professional Development</h2>
     <p>SECHIVE security personnel undergo rigorous training programs to enhance their skills and maintain the highest standards.</p>
     <h3>Training Programs:</h3>
@@ -12,7 +12,7 @@ const TrainingDevelopment: React.FC = () => (
       <li><strong>Administrative Security</strong> – Training in access control, visitor management, and surveillance monitoring for corporate offices.</li>
       <li><strong>Event Security</strong> – Managing crowd control, VIP protection, entry screenings, and emergency response for public and private events.</li>
     </ul>
-  </section>
+  </div>
 );
 
 export default TrainingDevelopment;

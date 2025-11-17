@@ -1,12 +1,22 @@
-body, .homepage-intro, .glass-feature-container, h1, h2, h3, h4, h5, h6, p, ul, ol, li, .home-section {
-  color: #1a2a4e;
+/* Make 'Call Us At:' text thicker and glowing */
+.header-call-label {
+  font-weight: 900;
+  color: #f8f9fa;
   text-shadow: none;
+  letter-spacing: 0.5px;
+}
+body, .homepage-intro, .glass-feature-container, h1, h2, h3, h4, h5, h6, p, ul, ol, li, .home-section {
+  color: #f8f9fa;
 }
 .nav-link, .dropdown-trigger, .dropdown-link {
-  color: #1a2a4e;
-  text-shadow: 0 0 8px #38bdf8, 0 0 16px #223366, 0 0 24px #fff2;
-  font-weight: 600;
-  transition: color 0.2s, text-shadow 0.2s;
+  color: #f8f9fa;
+  text-shadow: none;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.5em 1em;
+  margin: 0 0.25em;
+  background: none;
+  transition: color 0.2s;
 }
 
 .nav-link:hover, .dropdown-trigger:hover, .dropdown-link:hover {
@@ -23,16 +33,39 @@ body, .homepage-intro, .glass-feature-container, h1, h2, h3, h4, h5, h6, p, ul, 
   display: flex;
   flex-direction: column;
   align-items: stretch;
-  padding: 0.5em 0 0.5em 0;
+  padding: 0.05em 0 0.05em 0;
+  background: rgba(0,0,0,0.55); /* semi-transparent dark overlay */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 3px solid #38bdf8;
+  box-shadow: 0 2px 16px #0006;
+  border-radius: 0 0 18px 18px;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+  transform: translateY(0);
+  opacity: 1;
 }
 
+.header-title {
+  font-size: 0.9rem;
+  margin-bottom: 0.05em;
+  margin-top: 0.05em;
+  color: #f8f9fa;
+  text-shadow: none;
+}
+
+.header-info {
+  padding: 0.05em 0;
+  margin: 0;
+  color: #f8f9fa;
+  text-shadow: none;
+}
 
 .header-flex {
   display: flex;
   flex-direction: row;
   align-items: center;
   width: 100%;
-  padding: 0 2em;
+  padding: 0 0.25em;
   position: relative;
 }
 
@@ -41,6 +74,8 @@ body, .homepage-intro, .glass-feature-container, h1, h2, h3, h4, h5, h6, p, ul, 
   width: auto;
   margin-right: 1em;
   flex: 0 0 auto;
+  box-shadow: 0 0 24px #38bdf8, 0 0 8px #fff;
+  border-radius: 12px;
 }
 
 .main-nav {
@@ -111,6 +146,7 @@ body, .homepage-intro, .glass-feature-container, h1, h2, h3, h4, h5, h6, p, ul, 
   width: 100vw;
   display: flex;
   flex-direction: column;
+  background: rgba(0,0,0,0.55); /* semi-transparent dark overlay for contrast */
 }
 /* Responsive nav bar for mobile portrait */
 @media (max-width: 600px) and (orientation: portrait) {
@@ -171,6 +207,9 @@ body, .homepage-intro, .glass-feature-container, h1, h2, h3, h4, h5, h6, p, ul, 
   margin: 2em 0 2.5em 0;
   z-index: 2;
   overflow: hidden;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+  transform: translateY(0);
+  opacity: 1;
 }
 
 .homepage-intro::before {
@@ -224,4 +263,124 @@ body, .homepage-intro, .glass-feature-container, h1, h2, h3, h4, h5, h6, p, ul, 
   100% {
     background-position: 300% 50%;
   }
+}
+
+/* Modern header enhancements */
+.main-header {
+  width: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0.05em 0 0.05em 0;
+  background: rgba(0,0,0,0.55); /* semi-transparent dark overlay */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 3px solid #38bdf8;
+  box-shadow: 0 2px 16px #0006;
+  border-radius: 0 0 18px 18px;
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.main-header::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #38bdf8 0%, #fff 100%);
+  opacity: 0.5;
+  animation: header-shine 3s linear infinite;
+  border-radius: 0 0 18px 18px;
+}
+
+@keyframes header-shine {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+.sechive-logo {
+  height: 80px;
+  width: auto;
+  margin-right: 1em;
+  flex: 0 0 auto;
+  box-shadow: 0 0 24px #38bdf8, 0 0 8px #fff;
+  border-radius: 12px;
+}
+
+.header-flex {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding: 0 0.25em;
+  position: relative;
+}
+
+/* Example icon button styles for header */
+.header-icons {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+  margin-left: auto;
+}
+.header-icon-btn {
+  background: rgba(56,189,248,0.12);
+  border: none;
+  border-radius: 50%;
+  padding: 0.5em;
+  box-shadow: 0 0 8px #38bdf8;
+  color: #f8f9fa;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.header-icon-btn:hover {
+  background: #38bdf8;
+  color: #000;
+}
+
+/* Sky blue glassmorphism for .glass-feature-container */
+.glass-feature-container {
+  background: rgba(0,0,0,0.18); /* transparent dark glassmorphism */
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12), 0 1.5px 8px rgba(0,0,0,0.08);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1.5px solid rgba(255,255,255,0.12);
+  padding: 2em 1.5em;
+  margin: 2em 0 2.5em 0;
+  z-index: 2;
+  overflow: hidden;
+  color: #f8f9fa;
+  text-shadow: none;
+}
+
+/* Remove glowing effect from homepage-intro and home-section text */
+.homepage-intro, .home-section, .home-section-title, .home-section p, .home-section ul, .home-section li {
+  color: #f8f9fa;
+  text-shadow: none;
+}
+
+/* Header slide-up animation for scroll-hide/show */
+.header-hidden {
+  transform: translateY(-120px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Slide-up animation for homepage intro glass section */
+.homepage-intro {
+  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+  transform: translateY(0);
+  opacity: 1;
+}
+.intro-hidden {
+  transform: translateY(-120px);
+  opacity: 0;
+  pointer-events: none;
 }

@@ -1,0 +1,46 @@
+.logistics-gallery-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255,255,255,0.08);
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+}
+
+.logistics-gallery-container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  color: #38bdf8;
+}
+
+.logistics-gallery-container p {
+  margin-bottom: 2rem;
+  color: #f8f9fa;
+}
+
+.logistics-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+}
+
+.logistics-gallery-card {
+  background: rgba(0,0,0,0.18);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.10);
+  padding: 1rem;
+  text-align: center;
+}
+
+.logistics-gallery-card img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 0.5rem;
+}
+
+.logistics-gallery-caption {
+  color: #f8f9fa;
+  font-size: 1rem;
+  margin-top: 0.25rem;
+}

@@ -24,7 +24,7 @@ const ProductAndServices: React.FC = () => {
     }
   }, []);
   return (
-    <div className="product-services-container">
+    <div className="glass-feature-container">
       <h2>Products & Services</h2>
       <p>
         SECHIVE provides <b>comprehensive security services</b>, ensuring maximum protection through <b>advanced security technologies</b> and <b>highly trained personnel</b>.
