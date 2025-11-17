@@ -1,0 +1,10 @@
+@media (max-width: 600px) and (orientation: portrait) {
+  .quality-innovation-container {
+    padding: 1em 0.5em;
+    font-size: 1rem;
+  }
+}
+/* QualityInnovation page styles */
+.quality-innovation-container {
+  padding: 2em;
+}

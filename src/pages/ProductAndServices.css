@@ -1,0 +1,21 @@
+@media (max-width: 600px) and (orientation: portrait) {
+  .product-services-container {
+    padding: 1em 0.5em;
+    font-size: 1rem;
+  }
+  .services-dropdown {
+    padding: 0.4em;
+    font-size: 1rem;
+  }
+}
+/* ProductAndServices page styles */
+.product-services-container {
+  padding: 2em;
+}
+.services-dropdown {
+  margin: 1em 0;
+  padding: 0.5em;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+

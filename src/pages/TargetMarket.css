@@ -1,0 +1,10 @@
+@media (max-width: 600px) and (orientation: portrait) {
+  .target-market-container {
+    padding: 1em 0.5em;
+    font-size: 1rem;
+  }
+}
+/* TargetMarket page styles */
+.target-market-container {
+  padding: 2em;
+}

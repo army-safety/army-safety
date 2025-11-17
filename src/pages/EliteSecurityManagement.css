@@ -1,0 +1,10 @@
+@media (max-width: 600px) and (orientation: portrait) {
+  .elite-security-container {
+    padding: 1em 0.5em;
+    font-size: 1rem;
+  }
+}
+/* EliteSecurityManagement page styles */
+.elite-security-container {
+  padding: 2em;
+}
