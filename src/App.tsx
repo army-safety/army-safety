@@ -5,27 +5,26 @@ import sechiveLogo from '../public/SECHIVE.png';
 import './App.css';
 
 
-import wallpaper1 from './assets/wallpaper/wallpaper1.jpeg';
+import compound1 from './assets/wallpaper/compound1.jpeg';
 import innovo from './assets/wallpaper/innovo.png';
-import wallpaper2 from './assets/wallpaper/wallpaper2.jpg';
-import wallpaper5 from './assets/wallpaper/wallpaper5.jpeg';
+import response from './assets/wallpaper/response.jpg';
+import compound2 from './assets/wallpaper/compound2.jpeg';
+import fedex from './assets/wallpaper/fedex.jpeg';
+import security1 from './assets/wallpaper/security1.jpg';
+import security_girl1 from './assets/wallpaper/security_girl1.jpg';
+import owner from './assets/wallpaper/owner.jpeg';
+import iguall from './assets/wallpaper/iguall.jpeg';
+import cctv1 from './assets/wallpaper/cctv1.jpg';
+import kasrawy from './assets/wallpaper/kasrawy.png';
+import cctv2 from './assets/wallpaper/cctv2.jpg';
+import security2 from './assets/wallpaper/security2.jpg';
+import samco from './assets/wallpaper/samco.png';
+import security_girl2 from './assets/wallpaper/security_girl2.jpg';
+
 
 /*
-import wallpaper3 from './assets/wallpaper/wallpaper3.jpeg';
-import wallpaper4 from './assets/wallpaper/wallpaper4.jpg';
-import wallpaper6 from './assets/wallpaper/wallpaper6.jpg';
-import wallpaper8 from './assets/wallpaper/wallpaper8.jpeg';
-import wallpaper9 from './assets/wallpaper/wallpaper9.jpeg';
-import wallpaper10 from './assets/wallpaper/wallpaper10.jpg';
-import wallpaper11 from './assets/wallpaper/wallpaper11.jpeg';
-import wallpaper12 from './assets/wallpaper/wallpaper12.jpg';
-import wallpaper13 from './assets/wallpaper/wallpaper13.png';
-import wallpaper14 from './assets/wallpaper/wallpaper14.jpg';
-import wallpaper15 from './assets/wallpaper/wallpaper15.png';
-import wallpaper16 from './assets/wallpaper/wallpaper16.jpg';
 
-, wallpaper3, wallpaper4, wallpaper5, wallpaper6,
-wallpaper8, wallpaper9, wallpaper10,wallpaper11, wallpaper12, wallpaper13, wallpaper14, wallpaper15, wallpaper16
+
 */
 
 // Add more wallpaper imports as needed
@@ -62,8 +61,8 @@ import SecurityConsulting from './pages/SecurityConsulting';
 import LogisticsGallery from './pages/LogisticsGallery';
 
 const slideshowImages = [
-  wallpaper1,  innovo, wallpaper2,wallpaper5,
-
+ compound1,  innovo, response ,compound2, fedex,security1,security_girl1, 
+ owner,iguall,cctv1,kasrawy,cctv2,security2,samco,,security_girl2
 ];
 
 
