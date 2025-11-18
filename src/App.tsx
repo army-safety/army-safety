@@ -129,11 +129,14 @@ function App() {
               slide === idx
                 ? (img === innovo || img === response || img == security1 || 
                   img == security_girl1 || img == security_girl2 || img ==iguall || img == kasrawy || img == owner
-                  || img == cctv1 || img == cctv2
+                  || img == cctv1 || img == cctv2 || img == samco || img == security2   || img == compound1
+                   || img == compound2 || img == fedex
                     ? "bg-slide active innovo-slide"
                     : "bg-slide active")
                 : (img === innovo || img === response  || img == security1 || img == security_girl1 
-                  || img == security_girl2 || img ==iguall || img == kasrawy || img == owner || img == cctv1 || img == cctv2
+                  || img == security_girl2 || img ==iguall || img == kasrawy || img == owner 
+                  || img == cctv1 || img == cctv2 || img == samco || img == security2 || img == compound1 
+                  || img == compound2 || img == fedex
                     ? "bg-slide innovo-slide"
                     : "bg-slide")
             }
