@@ -1,9 +1,6 @@
-
-
 // import React from 'react'; // Not needed for React 17+ with JSX transform
 import sechiveLogo from '../public/SECHIVE.png';
 import './App.css';
-
 
 import compound1 from './assets/wallpaper/compound1.jpeg';
 import innovo from './assets/wallpaper/innovo.png';
@@ -21,19 +18,7 @@ import security2 from './assets/wallpaper/security2.jpg';
 import samco from './assets/wallpaper/samco.png';
 import security_girl2 from './assets/wallpaper/security_girl2.jpg';
 
-
-/*
-
-
-*/
-
-// Add more wallpaper imports as needed
-
-
-// Removed unused services and targetMarkets arrays
-// import React from 'react'; // Keeping this line as it may be needed for JSX
-
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { useLocation, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import './pages/EliteSecurityManagement.css';
@@ -43,6 +28,7 @@ import './pages/CompanyHistory.css';
 import './pages/ProductAndServices.css';
 import './pages/TargetMarket.css';
 import './pages/CurrentPartenerShips.css';
+
 // Page imports
 import EliteSecurityManagement from './pages/EliteSecurityManagement';
 import QualityInnovation from './pages/QualityInnovation';
@@ -61,17 +47,77 @@ import SecurityConsulting from './pages/SecurityConsulting';
 import LogisticsGallery from './pages/LogisticsGallery';
 
 const slideshowImages = [
- compound1,  innovo, response ,compound2, fedex,security1,security_girl1, 
- owner,iguall,cctv1,kasrawy,cctv2,security2,samco,security_girl2
+  compound1, innovo, response, compound2, fedex, security1, security_girl1,
+  owner, iguall, cctv1, kasrawy, cctv2, security2, samco, security_girl2
 ];
 
+const testText = "This is a typewriter test — animated text should appear here";
+
+// REMOVED export default from here - make it a named export instead
+export function TypewriterTest() {
+  const [typedText, setTypedText] = useState("");
+  const typeIndex = useRef(0);
+  
+  useEffect(() => {
+    setTypedText("");
+    typeIndex.current = 0;
+    const interval = setInterval(() => {
+      if (typeIndex.current < testText.length) {
+        setTypedText((prev) => prev + testText.charAt(typeIndex.current));
+        typeIndex.current++;
+      } else {
+        clearInterval(interval);
+      }
+    }, 60);
+    return () => clearInterval(interval);
+  }, []);
+  
+  return (
+    <div className="typewriter-test-container">
+      <span className="typewriter-test-text">
+        {typedText}
+        <span className="typewriter-test-cursor">|</span>
+      </span>
+    </div>
+  );
+}
 
 function App() {
+  const location = useLocation();
   const [slide, setSlide] = useState(0);
   const [showHeader, setShowHeader] = useState(true);
-  const [showIntro, setShowIntro] = useState(false); // Hidden by default
+  const [showIntro, setShowIntro] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(window.scrollY);
-  const location = useLocation();
+  const [showWelcome, setShowWelcome] = useState(true);
+  const typewriterText = "Welcome to SECHIVE — Secure Your World";
+  const [typedText, setTypedText] = useState("");
+  const typeIndex = useRef(0);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
+
+  useEffect(() => {
+    if (showWelcome && location.pathname === '/' && !showIntro) {
+      setTypedText("");
+      typeIndex.current = 0;
+      const interval = setInterval(() => {
+        if (typeIndex.current < typewriterText.length) {
+          setTypedText((prev) => prev + typewriterText[typeIndex.current]);
+          typeIndex.current++;
+        } else {
+          clearInterval(interval);
+        }
+      }, 60);
+      return () => clearInterval(interval);
+    }
+  }, [showWelcome, location.pathname, showIntro]);
+
+  useEffect(() => {
+    if (location.pathname === '/' && !showIntro) {
+      const timer = setTimeout(() => setShowWelcome(false), 3500);
+      return () => clearTimeout(timer);
+    } else {
+      setShowWelcome(false);
+    }
+  }, [location.pathname, showIntro]);
 
   // List of routes that should show the intro glass section
   const introRoutes = [
@@ -93,7 +139,6 @@ function App() {
   ];
 
   useEffect(() => {
-    // Show intro only when on a navlink route
     setShowIntro(introRoutes.includes(location.pathname));
   }, [location.pathname]);
 
@@ -116,7 +161,7 @@ function App() {
     }, 3500);
     return () => clearInterval(interval);
   }, []);
-  const [dropdownOpen, setDropdownOpen] = useState(false);
+
   return (
     <div className="app-root">
       <div className="bg-slideshow">
@@ -127,21 +172,29 @@ function App() {
             alt={`Slide ${idx + 1}`}
             className={
               slide === idx
-                ? (img === innovo || img === response || img == security1 || 
-                  img == security_girl1 || img == security_girl2 || img ==iguall || img == kasrawy || img == owner
-                  || img == cctv1 || img == cctv2 || img == samco || img == security2   || img == compound1
-                   || img == compound2 || img == fedex
-                    ? "bg-slide active innovo-slide"
-                    : "bg-slide active")
-                : (img === innovo || img === response  || img == security1 || img == security_girl1 
-                  || img == security_girl2 || img ==iguall || img == kasrawy || img == owner 
-                  || img == cctv1 || img == cctv2 || img == samco || img == security2 || img == compound1 
-                  || img == compound2 || img == fedex
-                    ? "bg-slide innovo-slide"
-                    : "bg-slide")
+                ? (img === innovo || img === response || img === security1 ||
+                  img === security_girl1 || img === security_girl2 || img === iguall || img === kasrawy || img === owner
+                  || img === cctv1 || img === cctv2 || img === samco || img === security2 || img === compound1
+                  || img === compound2 || img === fedex
+                  ? "bg-slide active innovo-slide"
+                  : "bg-slide active")
+                : (img === innovo || img === response || img === security1 || img === security_girl1
+                  || img === security_girl2 || img === iguall || img === kasrawy || img === owner
+                  || img === cctv1 || img === cctv2 || img === samco || img === security2 || img === compound1
+                  || img === compound2 || img === fedex
+                  ? "bg-slide innovo-slide"
+                  : "bg-slide")
             }
           />
         ))}
+        {location.pathname === '/' && !showIntro && showWelcome && (
+          <div className="homepage-motion">
+            <span className="motion-text typewriter-test-text">
+              {typedText}
+              <span className="typewriter-cursor typewriter-test-cursor">|</span>
+            </span>
+          </div>
+        )}
       </div>
       <div className="content-overlay">
         <header className={`main-header${showHeader ? '' : ' header-hidden'}`}>
@@ -157,7 +210,9 @@ function App() {
                 <div
                   className="dropdown-trigger"
                   onClick={() => setDropdownOpen(open => !open)}
-                >Services ▼</div>
+                >
+                  Services ▼
+                </div>
                 {dropdownOpen && (
                   <div className="dropdown-menu">
                     <div className="dropdown-title">Our Services</div>
@@ -190,6 +245,7 @@ function App() {
               <Link to="/logistics" className="nav-link">Logistics</Link>
             </nav>
           </div>
+          <TypewriterTest />
           <div className="header-info">
             <h2 className="header-title">Welcome to SECHIVE Security Services Egypt</h2>
             <div className="header-contact">
@@ -202,8 +258,8 @@ function App() {
                   +20 155 484 1548
                   <a href="https://wa.me/201554841548" target="_blank" rel="noopener noreferrer" className="header-whatsapp">
                     <svg xmlns="http://www.w3.org/2000/svg" width="44" height="44" viewBox="0 0 32 32">
-                      <circle cx="16" cy="16" r="16" fill="#25D366"/>
-                      <path fill="#fff" d="M22.1 18.2c-.3-.2-1.7-.8-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.3-.8-.7-1.3-1.5-1.5-1.8-.2-.3 0-.5.1-.7.1-.1.2-.3.3-.4.1-.1.1-.2.2-.3.1-.1.1-.2.2-.3.1-.2.1-.3 0-.5-.1-.2-.7-1.7-.9-2.3-.2-.6-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-.7.7-.7 1.7s.7 2.1 1.5 3c1.1 1.2 2.6 2.1 4.1 2.1.5 0 1-.1 1.4-.3.4-.2 1.1-.7 1.2-1.3.1-.6.1-1.1.1-1.2-.1-.1-.3-.2-.6-.3z"/>
+                      <circle cx="16" cy="16" r="16" fill="#25D366" />
+                      <path fill="#fff" d="M22.1 18.2c-.3-.2-1.7-.8-2-1-.3-.1-.5-.2-.7.2-.2.3-.8 1-.9 1.1-.2.2-.3.2-.6.1-.3-.2-1.2-.4-2.3-1.3-.8-.7-1.3-1.5-1.5-1.8-.2-.3 0-.5.1-.7.1-.1.2-.3.3-.4.1-.1.1-.2.2-.3.1-.1.1-.2.2-.3.1-.2.1-.3 0-.5-.1-.2-.7-1.7-.9-2.3-.2-.6-.4-.5-.6-.5h-.5c-.2 0-.5.1-.7.3-.2.2-.7.7-.7 1.7s.7 2.1 1.5 3c1.1 1.2 2.6 2.1 4.1 2.1.5 0 1-.1 1.4-.3.4-.2 1.1-.7 1.2-1.3.1-.6.1-1.1.1-1.2-.1-.1-.3-.2-.6-.3z" />
                     </svg>
                   </a>
                 </span>
@@ -212,7 +268,6 @@ function App() {
             <button className="header-email-btn" onClick={() => window.location.href = 'mailto:hivesec2000@gmail.com'}>EMAIL US</button>
           </div>
         </header>
-        {/* Homepage intro glass section only for intro routes */}
         {showIntro && (
           <main className="homepage-intro">
             <Routes>
@@ -222,27 +277,7 @@ function App() {
                     <h2 className="home-section-title">Our Mission</h2>
                     <p>
                       <strong>
-                        Welcome to SECHIVE, Egypt’s distinguished provider of security, guarding, and money transport services. Our mission is to deliver top-tier, innovative security solutions with unwavering commitment to quality, efficiency, and professionalism. We protect institutions, events, and critical infrastructures with highly qualified teams and advanced technologies.
-                      </strong>
-                    </p>
-                  </section>
-                  <section className="home-section">
-                    <h2 className="home-section-title">Our Services</h2>
-                    <ul>
-                      <li><strong>Corporate & Commercial Security</strong></li>
-                      <li><strong>Industrial & Manufacturing Security</strong></li>
-                      <li><strong>Event & Crowd Security</strong></li>
-                      <li><strong>Tourism & Hospitality Security</strong></li>
-                      <li><strong>Healthcare & Educational Security</strong></li>
-                      <li><strong>24/7 Monitoring & Rapid Response</strong></li>
-                      <li><strong>Integrated Security Consulting</strong></li>
-                    </ul>
-                  </section>
-                  <section className="home-section">
-                    <h2 className="home-section-title">Target Market</h2>
-                    <p>
-                      <strong>
-                        We proudly serve a wide range of sectors, including corporate offices, shopping malls, factories, healthcare and educational institutions, hotels, airports, government facilities, and major events. Our solutions are tailored to meet the unique needs of each client, ensuring specialized protection and peace of mind.
+                        Welcome to SECHIVE, Egypt's distinguished provider of security, guarding, and money transport services. Our mission is to deliver top-tier, innovative security solutions with unwavering commitment to quality, efficiency, and professionalism. We protect institutions, events, and critical infrastructures with highly qualified teams and advanced technologies.
                       </strong>
                     </p>
                   </section>
@@ -281,7 +316,6 @@ function App() {
             </Routes>
           </main>
         )}
-        {/* Logistics and other non-intro pages render outside the glass section */}
         <Routes>
           <Route path="/logistics" element={<LogisticsGallery />} />
         </Routes>
@@ -293,4 +327,5 @@ function App() {
   );
 }
 
+// Only ONE default export - the App component
 export default App;
