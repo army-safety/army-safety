@@ -1,18 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <meta http-equiv="refresh" content="0; url=/SECHIVE/" />
+    <meta charset="UTF-8" />
+    <title>SECHIVE</title>
     <script>
-      // For SPA routing: redirect to index.html and preserve path
-      var path = window.location.pathname.replace(/^\/SECHIVE\//, "");
-      if (path && path !== "404.html") {
-        window.location.replace("/SECHIVE/?redirect=" + encodeURIComponent(path));
-      }
+      // Single Page Apps for GitHub Pages
+      // https://github.com/rafgraph/spa-github-pages
+      (function(l) {
+        if (l.search[1] === '/' ) {
+          var decoded = l.search.slice(1).split('&').map(function(s) { 
+            return s.replace(/~and~/g, '&')
+          }).join('?');
+          window.history.replaceState(null, null,
+              l.pathname.slice(0, -1) + decoded + l.hash
+          );
+        }
+      }(window.location))
     </script>
-    <title>Redirecting...</title>
   </head>
   <body>
-    <h1>Redirecting...</h1>
-    <p>If you are not redirected, <a href="/SECHIVE/">click here</a>.</p>
+    <div>Loading...</div>
   </body>
 </html>

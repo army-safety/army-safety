@@ -1,18 +1,13 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import React from 'react'
+import ReactDOM from 'react-dom/client'
+import { HashRouter } from 'react-router-dom'
+import App from './App.tsx'
 import './index.css'
-import App from './App.tsx';
-import { BrowserRouter } from 'react-router-dom';
 
-import removeAds from './removeAds'; // Will resolve to .ts now
-
-createRoot(document.getElementById('root')!).render(
-  <StrictMode>
-    <BrowserRouter>
+ReactDOM.createRoot(document.getElementById('root')!).render(
+  <React.StrictMode>
+    <HashRouter>
       <App />
-    </BrowserRouter>
-  </StrictMode>,
-);
-
-// Run ad-removal logic after initial render
-removeAds();
+    </HashRouter>
+  </React.StrictMode>,
+)

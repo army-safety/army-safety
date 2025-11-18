@@ -19,7 +19,7 @@ import samco from './assets/wallpaper/samco.png';
 import security_girl2 from './assets/wallpaper/security_girl2.jpg';
 
 import React, { useEffect, useState, useRef } from 'react';
-import { useLocation, Routes, Route, Link } from 'react-router-dom';
+import { useLocation, Routes, Route, Link, HashRouter } from 'react-router-dom';
 import './App.css';
 import './pages/EliteSecurityManagement.css';
 import './pages/QualityInnovation.css';
@@ -51,7 +51,7 @@ const slideshowImages = [
   owner, iguall, cctv1, kasrawy, cctv2, security2, samco, security_girl2
 ];
 
-const testText = "This is a typewriter test — animated text should appear here";
+const testText = "This is a typewriter test — animated text should appear now";
 
 // REMOVED export default from here - make it a named export instead
 export function TypewriterTest() {
