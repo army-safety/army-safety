@@ -62,7 +62,7 @@ import LogisticsGallery from './pages/LogisticsGallery';
 
 const slideshowImages = [
  compound1,  innovo, response ,compound2, fedex,security1,security_girl1, 
- owner,iguall,cctv1,kasrawy,cctv2,security2,samco,,security_girl2
+ owner,iguall,cctv1,kasrawy,cctv2,security2,samco,security_girl2
 ];
 
 
@@ -127,8 +127,15 @@ function App() {
             alt={`Slide ${idx + 1}`}
             className={
               slide === idx
-                ? (img === innovo ? "bg-slide active innovo-slide" : "bg-slide active")
-                : (img === innovo ? "bg-slide innovo-slide" : "bg-slide")
+                ? (img === innovo || img === response || img == security1 || 
+                  img == security_girl1 || img == security_girl2 || img ==iguall || img == kasrawy || img == owner
+                  || img == cctv1 || img == cctv2
+                    ? "bg-slide active innovo-slide"
+                    : "bg-slide active")
+                : (img === innovo || img === response  || img == security1 || img == security_girl1 
+                  || img == security_girl2 || img ==iguall || img == kasrawy || img == owner || img == cctv1 || img == cctv2
+                    ? "bg-slide innovo-slide"
+                    : "bg-slide")
             }
           />
         ))}
