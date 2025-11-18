@@ -1,3 +1,10 @@
+.intro-content {
+  background: rgba(56,189,248,0.45);
+  padding: 2em 1.5em;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  margin-bottom: 1.5em;
+}
 @media (max-width: 600px) and (orientation: portrait) {
   .target-market-container {
     padding: 1em 0.5em;

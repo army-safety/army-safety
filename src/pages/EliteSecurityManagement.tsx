@@ -2,7 +2,7 @@ import React from 'react';
 import './EliteSecurityManagement.css';
 
 const EliteSecurityManagement: React.FC = () => (
-  <div className="glass-feature-container">
+  <div className="intro-content">
     <h2><strong>Elite Security Management & Protection</strong></h2>
     <p><strong>
       At SECHIVE, we operate under a carefully structured and meticulously designed security system. Our highly qualified team of security professionals is trained in securing institutions, critical infrastructures, and large-scale events. Each member undergoes advanced security training, including:

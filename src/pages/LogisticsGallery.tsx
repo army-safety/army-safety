@@ -64,7 +64,7 @@ const logisticsImages = [
 
 export default function LogisticsGallery() {
   return (
-    <div className="logistics-gallery-container">
+    <div className="intro-content">
       <h2>Logistics & Equipment Gallery</h2>
       <p>Browse our selection of security uniforms, shoes, and gear.</p>
       <div className="logistics-gallery-grid">

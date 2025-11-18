@@ -2,7 +2,7 @@ import React from 'react';
 import './TrainingDevelopment.css';
 
 const TrainingDevelopment: React.FC = () => (
-  <div className="glass-feature-container">
+  <div className="intro-content">
     <h2>Continuous Training & Professional Development</h2>
     <p>SECHIVE security personnel undergo rigorous training programs to enhance their skills and maintain the highest standards.</p>
     <h3>Training Programs:</h3>

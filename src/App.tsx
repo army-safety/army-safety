@@ -1,21 +1,27 @@
+
+
 // import React from 'react'; // Not needed for React 17+ with JSX transform
 import sechiveLogo from '../public/SECHIVE.png';
 import './App.css';
 
-// Wallpaper imports
+
 import wallpaper1 from './assets/wallpaper/wallpaper1.jpeg';
-import wallpaper2 from './assets/wallpaper/wallpaper2.jpeg';
-import wallpaper3 from './assets/wallpaper/wallpaper3.jpg';
+import wallpaper2 from './assets/wallpaper/wallpaper2.jpg';
+import wallpaper3 from './assets/wallpaper/wallpaper3.jpeg';
 import wallpaper4 from './assets/wallpaper/wallpaper4.jpg';
-import wallpaper5 from './assets/wallpaper/wallpaper5.jpg';
+import wallpaper5 from './assets/wallpaper/wallpaper5.jpeg';
 import wallpaper6 from './assets/wallpaper/wallpaper6.jpg';
-import wallpaper7 from './assets/wallpaper/wallpaper7.jpg';
-import wallpaper8 from './assets/wallpaper/wallpaper8.jpg';
+import wallpaper7 from './assets/wallpaper/wallpaper7.png';
+import wallpaper8 from './assets/wallpaper/wallpaper8.jpeg';
 import wallpaper9 from './assets/wallpaper/wallpaper9.jpeg';
 import wallpaper10 from './assets/wallpaper/wallpaper10.jpg';
-import wallpaper11 from './assets/wallpaper/wallpaper11.jpg';
+import wallpaper11 from './assets/wallpaper/wallpaper11.jpeg';
 import wallpaper12 from './assets/wallpaper/wallpaper12.jpg';
-import wallpaper13 from './assets/wallpaper/wallpaper13.jpeg';
+import wallpaper13 from './assets/wallpaper/wallpaper13.png';
+import wallpaper14 from './assets/wallpaper/wallpaper14.jpg';
+import wallpaper15 from './assets/wallpaper/wallpaper15.png';
+import wallpaper16 from './assets/wallpaper/wallpaper16.jpg';
+
 
 // Add more wallpaper imports as needed
 
@@ -52,8 +58,9 @@ import LogisticsGallery from './pages/LogisticsGallery';
 
 const slideshowImages = [
   wallpaper1, wallpaper2, wallpaper3, wallpaper4, wallpaper5, wallpaper6, wallpaper7, 
-  wallpaper8, wallpaper9, wallpaper10, wallpaper11, wallpaper12, wallpaper13
+  wallpaper8, wallpaper9, wallpaper10,wallpaper11, wallpaper12, wallpaper13, wallpaper14, wallpaper15, wallpaper16
 ];
+
 
 function App() {
   const [slide, setSlide] = useState(0);

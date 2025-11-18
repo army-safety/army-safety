@@ -2,7 +2,7 @@ import React from 'react';
 import './QualityInnovation.css';
 
 const QualityInnovation: React.FC = () => (
-  <div className="glass-feature-container">
+  <div className="intro-content">
     <h2>Commitment to Quality & Innovation</h2>
     <p>At SECHIVE, our success and customer satisfaction stem from our unwavering commitment to quality, efficiency, and professionalism. We continuously invest in:</p>
     <ul>

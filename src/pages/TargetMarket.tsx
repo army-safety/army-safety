@@ -2,7 +2,7 @@ import React from 'react';
 import './TargetMarket.css';
 
 const TargetMarket: React.FC = () => (
-  <div className="glass-feature-container">
+  <div className="intro-content">
     <h2>Target Market</h2>
       <p>SECHIVE provides <strong>tailored security solutions</strong> for diverse industries, ensuring <strong>specialized protection</strong> for each sector’s unique needs.</p>
     <ul>

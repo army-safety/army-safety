@@ -2,7 +2,7 @@ import React from 'react';
 import './CurrentPartenerShips.css';
 
 const CurrentPartenerShips: React.FC = () => (
-  <div className="glass-feature-container">
+  <div className="intro-content">
     <h2>Current Partnerships</h2>
       <p>SECHIVE is proud to serve <strong>a wide range of clients across multiple industries</strong>, ensuring safety and security for leading organizations.</p>
     <h3>Government Sector Companies:</h3>

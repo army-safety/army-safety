@@ -1,3 +1,5 @@
+# Ignore build output directory
+dist/
 # Logs
 logs
 *.log
