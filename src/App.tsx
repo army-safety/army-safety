@@ -6,12 +6,14 @@ import './App.css';
 
 
 import wallpaper1 from './assets/wallpaper/wallpaper1.jpeg';
+import innovo from './assets/wallpaper/innovo.png';
 import wallpaper2 from './assets/wallpaper/wallpaper2.jpg';
+import wallpaper5 from './assets/wallpaper/wallpaper5.jpeg';
+
+/*
 import wallpaper3 from './assets/wallpaper/wallpaper3.jpeg';
 import wallpaper4 from './assets/wallpaper/wallpaper4.jpg';
-import wallpaper5 from './assets/wallpaper/wallpaper5.jpeg';
 import wallpaper6 from './assets/wallpaper/wallpaper6.jpg';
-import wallpaper7 from './assets/wallpaper/wallpaper7.png';
 import wallpaper8 from './assets/wallpaper/wallpaper8.jpeg';
 import wallpaper9 from './assets/wallpaper/wallpaper9.jpeg';
 import wallpaper10 from './assets/wallpaper/wallpaper10.jpg';
@@ -22,6 +24,9 @@ import wallpaper14 from './assets/wallpaper/wallpaper14.jpg';
 import wallpaper15 from './assets/wallpaper/wallpaper15.png';
 import wallpaper16 from './assets/wallpaper/wallpaper16.jpg';
 
+, wallpaper3, wallpaper4, wallpaper5, wallpaper6,
+wallpaper8, wallpaper9, wallpaper10,wallpaper11, wallpaper12, wallpaper13, wallpaper14, wallpaper15, wallpaper16
+*/
 
 // Add more wallpaper imports as needed
 
@@ -57,8 +62,8 @@ import SecurityConsulting from './pages/SecurityConsulting';
 import LogisticsGallery from './pages/LogisticsGallery';
 
 const slideshowImages = [
-  wallpaper1, wallpaper2, wallpaper3, wallpaper4, wallpaper5, wallpaper6, wallpaper7, 
-  wallpaper8, wallpaper9, wallpaper10,wallpaper11, wallpaper12, wallpaper13, wallpaper14, wallpaper15, wallpaper16
+  wallpaper1,  innovo, wallpaper2,wallpaper5,
+
 ];
 
 
@@ -121,7 +126,11 @@ function App() {
             key={img}
             src={img}
             alt={`Slide ${idx + 1}`}
-            className={slide === idx ? "bg-slide active" : "bg-slide"}
+            className={
+              slide === idx
+                ? (img === innovo ? "bg-slide active innovo-slide" : "bg-slide active")
+                : (img === innovo ? "bg-slide innovo-slide" : "bg-slide")
+            }
           />
         ))}
       </div>
