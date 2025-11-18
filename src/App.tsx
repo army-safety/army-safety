@@ -160,13 +160,28 @@ function App() {
                 >Services ▼</div>
                 {dropdownOpen && (
                   <div className="dropdown-menu">
-                    <Link to="/corporate-security" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Corporate & Commercial Security</Link>
-                    <Link to="/industrial-security" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Industrial & Manufacturing Security</Link>
-                    <Link to="/event-security" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Event & Crowd Security</Link>
-                    <Link to="/tourism-security" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Tourism & Hospitality Security</Link>
-                    <Link to="/healthcare-security" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Healthcare & Educational Security</Link>
-                    <Link to="/monitoring-response" className="dropdown-link" onClick={() => setDropdownOpen(false)}>24/7 Monitoring & Rapid Response</Link>
-                    <Link to="/security-consulting" className="dropdown-link" onClick={() => setDropdownOpen(false)}>Integrated Security Consulting</Link>
+                    <div className="dropdown-title">Our Services</div>
+                    <Link to="/corporate-security" className="dropdown-link" onClick={() => setDropdownOpen(false)}>
+                      <span className="dropdown-label">Corporate & Commercial Security</span>
+                    </Link>
+                    <Link to="/industrial-security" className="dropdown-link" onClick={() => setDropdownOpen(false)}>
+                      <span className="dropdown-label">Industrial & Manufacturing Security</span>
+                    </Link>
+                    <Link to="/event-security" className="dropdown-link" onClick={() => setDropdownOpen(false)}>
+                      <span className="dropdown-label">Event & Crowd Security</span>
+                    </Link>
+                    <Link to="/tourism-security" className="dropdown-link" onClick={() => setDropdownOpen(false)}>
+                      <span className="dropdown-label">Tourism & Hospitality Security</span>
+                    </Link>
+                    <Link to="/healthcare-security" className="dropdown-link" onClick={() => setDropdownOpen(false)}>
+                      <span className="dropdown-label">Healthcare & Educational Security</span>
+                    </Link>
+                    <Link to="/monitoring-response" className="dropdown-link" onClick={() => setDropdownOpen(false)}>
+                      <span className="dropdown-label">24/7 Monitoring & Rapid Response</span>
+                    </Link>
+                    <Link to="/security-consulting" className="dropdown-link" onClick={() => setDropdownOpen(false)}>
+                      <span className="dropdown-label">Integrated Security Consulting</span>
+                    </Link>
                   </div>
                 )}
               </div>
