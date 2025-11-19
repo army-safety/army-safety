@@ -23,14 +23,11 @@ const CurrentPartenerShips: React.FC = () => (
       <li>Mabany Edris</li>
       <li>El Soadaa Group</li>
       <li>MORSHEDY GROUP</li>
-      <li>Iguall</li>
-      <li>CINCO</li>
     </ul>
     <h3>Tourism Resorts & Clubs:</h3>
     <ul>
       <li>Porto Marsa Alam</li>
       <li>Mexico Praia Village, Ain Sokhna</li>
-      <li>Porto Marsa Alam</li>
       <li>Koni</li>
     </ul>
     <h3>Commercial Malls:</h3>
@@ -40,12 +37,30 @@ const CurrentPartenerShips: React.FC = () => (
       <li>Tao Commercial Mall, Fifth Settlement</li>
       <li>Talaat Harb Mall, Downtown</li>
       <li>Park Mall, Fifth Settlement</li>
+      <li>Iguall</li>
+      <li>CINCO</li>
+      <li>Ahmed El Sallab Mall Mokatam</li>
+      <li>The Square - Value</li>
+      <li>prk vie upwyde</li>
     </ul>
 
     <h3>Compounds :</h3>
     <ul>
-      <li>Palm Hills</li>
+      <li>Hadyek Continental Zayed</li>
+      <li>Residence Zayed</li>
+      <li>Palm Hills Zayed</li>
+      <li>Palm Villa</li>
+      <li>Flowers</li>
+      <li>Sun City</li>
+      <li>Grand Residence</li>
       <li>Sodic</li>
+      <li>Sesillya</li>
+      <li>Rehana</li>
+      <li>View</li>
+      <li>Degla Gardens</li>
+      <li>Elshourk</li>
+      <li>Dyarna</li>
+      <li>Scober</li>
     </ul>
     <h3>Healthcare & Educational Institutions:</h3>
     <ul>
@@ -67,15 +82,10 @@ const CurrentPartenerShips: React.FC = () => (
       <li>Gamal Group.</li>
       <li>Logistic FC.</li>
     </ul>
-
      <h3>Educational institutions:</h3>
     <ul>
       <li>American School Zayed.</li>
-      <li>Moharam Language School-MILS</li>
-    
     </ul>
-
-
 
     <hr />
     <h3>Our Commitment to Security Excellence Through Partnerships</h3>
