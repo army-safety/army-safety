@@ -8,40 +8,51 @@ const CurrentPartenerShips: React.FC = () => (
     <h3>Government Sector Companies:</h3>
     <ul>
       <li>Egypt Real Estate Assets Company</li>
-      <li>Iron & Steel Company</li>
       <li>Industrial Development Company (Badr Zone Factory Complex)</li>
+      <li>Cairo Monorail</li>
+      <li>High speed Rail project</li>
       <li>Army Enterprises for Development Agency</li>
     </ul>
     <h3>Private Sector Companies (Factories):</h3>
     <ul>
-      <li>Innova Real Estate Development Company</li>
+      <li>Innova</li>
       <li>FedEx Express Shipping Company</li>
-      <li>Al-Salam International Company</li>
-      <li>Mabany Edris Real Estate Development Company</li>
-      <li>We Refresh Al-Fath Dairy Factory</li>
-      <li>Goodies Egypt Food Factory</li>
+      <li>KASRAWY GROUP</li>
+      <li>Ahmed El Sallab </li>
+      <li>El Sewedy Electric</li>
+      <li>Mabany Edris</li>
+      <li>El Soadaa Group</li>
+      <li>MORSHEDY GROUP</li>
+      <li>Iguall</li>
+      <li>CINCO</li>
     </ul>
     <h3>Tourism Resorts & Clubs:</h3>
     <ul>
-      <li>Porto Garb Resort, Marsa Alam</li>
+      <li>Porto Marsa Alam</li>
       <li>Mexico Praia Village, Ain Sokhna</li>
-      <li>Retaj Village, North Coast</li>
-      <li>Teachers Village, North Coast</li>
+      <li>Porto Marsa Alam</li>
+      <li>KOUNI</li>
     </ul>
     <h3>Commercial Malls:</h3>
     <ul>
-      <li>Al Baraka Mall, First Settlement</li>
+      <li>Mall Taw.</li>
       <li>Etap Mall, Sheikh Zayed</li>
       <li>Tao Commercial Mall, Fifth Settlement</li>
       <li>Talaat Harb Mall, Downtown</li>
       <li>Park Mall, Fifth Settlement</li>
     </ul>
+
+    <h3>Compounds :</h3>
+    <ul>
+      <li>Palm Hills</li>
+      <li>Sodic</li>
+    </ul>
     <h3>Healthcare & Educational Institutions:</h3>
     <ul>
-      <li>Nasser Institute for Tumors</li>
+      <li>Nasser Institute Hospital for Research and Treatment</li>
       <li>New Administrative Capital Hospital</li>
-      <li>Umm Al-Atibaa Hospital, Dokki</li>
-      <li>Okasha Hospital, Al-Haram</li>
+      <li>Kasr AL-Ainy Hospital</li>
+      <li>Al Hilal Hospital for Civilian Workers at the Ministry of Defense</li>
     </ul>
     <h3>Petroleum Companies:</h3>
     <ul>
@@ -49,13 +60,25 @@ const CurrentPartenerShips: React.FC = () => (
       <li>Petrojet Company, Northern Sector of Metro Line 4</li>
       <li>Petroleum Pipelines Company, Southern Sector</li>
     </ul>
-    <h3>Airports:</h3>
+    <h3>Logistic services:</h3>
     <ul>
-      <li>Marsa Alam International Airport</li>
-      <li>FedEx Express Distribution Center, Cairo Airport</li>
+      <li>FedEx Express Distribution Center, Cairo Airport.</li>
+      <li>Marsa Alam International Airport.</li>
+      <li>Gamal Group.</li>
+      <li>Logistic FC.</li>
     </ul>
+
+     <h3>Educational institutions:</h3>
+    <ul>
+      <li>American School Zayed.</li>
+      <li>Moharam Language School-MILS</li>
+    
+    </ul>
+
+
+
     <hr />
-    <h3>Final Thoughts</h3>
+    <h3>Our Commitment to Security Excellence Through Partnerships</h3>
       <p>At <strong>SECHIVE</strong>, we take pride in our <strong>unwavering commitment to security excellence</strong>. Through advanced technology, continuous training, and strategic partnerships, we remain dedicated to delivering the highest standards of security services to our clients across Egypt.</p>
   </div>
 );
