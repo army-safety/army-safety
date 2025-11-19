@@ -1,7 +1,6 @@
 import React from 'react';
-import './LogisticsGallery.css';
+import './PersonnelGallery.css';
 
-import guard1 from '../assets/personnel/guard1.jpg';
 import guard2 from '../assets/personnel/guard2.jpeg';
 import guard3 from '../assets/personnel/guard3.jpeg';
 import guard4 from '../assets/personnel/guard4.jpeg';
@@ -11,7 +10,6 @@ import guard7 from '../assets/personnel/guard7.jpeg';
 import guard8 from '../assets/personnel/guard8.jpeg';
 
 const images = [
-  { src: guard1, alt: 'Security Guard 1' },
   { src: guard2, alt: 'Security Guard 2' },
   { src: guard3, alt: 'Security Guard 3' },
   { src: guard4, alt: 'Security Guard 4' },
@@ -23,11 +21,11 @@ const images = [
 
 export default function PersonnelGallery() {
   return (
-    <div className="logistics-gallery-container">
-      <h2 className="gallery-title">Security Guards Gallery</h2>
-      <div className="gallery-grid">
+    <div className="personnel-gallery-container">
+      <h2 className="personnel-gallery-title">Security Guard Gallery</h2>
+      <div className="personnel-gallery-grid">
         {images.map((img, idx) => (
-          <img key={idx} src={img.src} alt={img.alt} className="gallery-img" />
+          <img key={idx} src={img.src} alt={img.alt} className="personnel-gallery-img" />
         ))}
       </div>
     </div>
