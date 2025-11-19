@@ -31,7 +31,7 @@ const CurrentPartenerShips: React.FC = () => (
       <li>Porto Marsa Alam</li>
       <li>Mexico Praia Village, Ain Sokhna</li>
       <li>Porto Marsa Alam</li>
-      <li>KOUNI</li>
+      <li>Koni</li>
     </ul>
     <h3>Commercial Malls:</h3>
     <ul>
