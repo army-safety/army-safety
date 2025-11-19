@@ -45,6 +45,7 @@ import HealthcareSecurity from './pages/HealthcareSecurity';
 import MonitoringResponse from './pages/MonitoringResponse';
 import SecurityConsulting from './pages/SecurityConsulting';
 import LogisticsGallery from './pages/LogisticsGallery';
+import PersonnelGallery from './pages/PersonnelGallery';
 
 const slideshowImages = [
   compound1, innovo, response, compound2, fedex, security1, security_girl1,
@@ -359,6 +360,7 @@ function App() {
         )}
         <Routes>
           <Route path="/logistics" element={<LogisticsGallery />} />
+          <Route path="/personnel-gallery" element={<PersonnelGallery />} />
         </Routes>
         <footer className="main-footer">
           &copy; {new Date().getFullYear()} SECHIVE. All rights reserved.

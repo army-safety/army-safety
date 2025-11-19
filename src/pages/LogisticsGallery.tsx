@@ -1,5 +1,6 @@
 import React from "react";
 import "./LogisticsGallery.css";
+import { Link } from 'react-router-dom';
 
 // Example image imports (replace with your actual filenames)
 
@@ -74,6 +75,11 @@ export default function LogisticsGallery() {
             <div className="logistics-gallery-caption">{img.alt}</div>
           </div>
         ))}
+      </div>
+      <div style={{ textAlign: 'center', margin: '2em 0' }}>
+        <Link to="/personnel-gallery" className="gallery-link-btn">
+          View Security Personnel Gallery
+        </Link>
       </div>
     </div>
   );

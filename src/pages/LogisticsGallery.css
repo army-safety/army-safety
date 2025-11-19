@@ -1,3 +1,22 @@
+.gallery-link-btn {
+  display: inline-block;
+  background: #38bdf8;
+  color: #fff;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 0.75em 2em;
+  margin-top: 1em;
+  font-size: 1.15em;
+  box-shadow: 0 2px 8px #38bdf8, 0 0 8px #fff2;
+  border: none;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+.gallery-link-btn:hover {
+  background: #0ea5e9;
+  color: #fff;
+  box-shadow: 0 4px 16px #38bdf8, 0 0 16px #fff2;
+}
 .intro-content {
   background: rgba(56,189,248,0.45);
   padding: 2em 1.5em;
