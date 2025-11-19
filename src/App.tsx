@@ -51,35 +51,70 @@ const slideshowImages = [
   owner, iguall, cctv1, kasrawy, cctv2, security2, samco, security_girl2
 ];
 
-const testText = "This is a typewriter test — animated text should appear now";
+const testText = "→ Security. Safety. Cash Transport.";
+const subText = " Professional protection for institutions, events, and high-value operations";
 
 // REMOVED export default from here - make it a named export instead
 export function TypewriterTest() {
   const [typedText, setTypedText] = useState("");
+  const [typedSubText, setTypedSubText] = useState("");
+  const [showSubText, setShowSubText] = useState(false);
   const typeIndex = useRef(0);
+  const subTypeIndex = useRef(0);
   
   useEffect(() => {
+    // Reset everything
     setTypedText("");
+    setTypedSubText("");
+    setShowSubText(false);
     typeIndex.current = 0;
-    const interval = setInterval(() => {
+    subTypeIndex.current = 0;
+    
+    // Type main text
+    const mainInterval = setInterval(() => {
       if (typeIndex.current < testText.length) {
         setTypedText((prev) => prev + testText.charAt(typeIndex.current));
         typeIndex.current++;
       } else {
-        clearInterval(interval);
+        clearInterval(mainInterval);
+        // Wait 500ms before starting subtext
+        setTimeout(() => {
+          setShowSubText(true);
+          
+          // Type subtext
+          const subInterval = setInterval(() => {
+            if (subTypeIndex.current < subText.length) {
+              setTypedSubText((prev) => prev + subText.charAt(subTypeIndex.current));
+              subTypeIndex.current++;
+            } else {
+              clearInterval(subInterval);
+            }
+          }, 40); // Faster typing for subtext
+        }, 500);
       }
     }, 60);
-    return () => clearInterval(interval);
+    
+    return () => clearInterval(mainInterval);
   }, []);
   
-  return (
-    <div className="typewriter-test-container">
-      <span className="typewriter-test-text">
-        {typedText}
-        <span className="typewriter-test-cursor">|</span>
-      </span>
-    </div>
-  );
+    return (
+      <div className="typewriter-test-container">
+        <div className="typewriter-main-line">
+          <span className="typewriter-test-text">
+            {typedText}
+          </span>
+        </div>
+
+        {showSubText && (
+          <div className="typewriter-subtext-line">
+            <span className="typewriter-subtext">
+              {typedSubText}
+            </span>
+          </div>
+        )}
+      </div>
+    );
+
 }
 
 function App() {
@@ -290,10 +325,16 @@ function App() {
                     </p>
                   </section>
                   <section className="home-section">
-                    <h2 className="home-section-title">Contact Us</h2>
+                    <h2 className="home-section-title">About Us</h2>
                     <p>
                       <strong>
-                        For more information, contact us at [Your Contact Information] or visit our website at [Your Website].
+                        <ul>
+                          <li>Licensed by the Ministry of Interior since 2019</li>
+                          <li>Experienced teams: rigorously trained officers with specialized certifications. </li>
+                          <li>Operational discipline: proven SOPs for high-risk and high-value operations.    </li>
+                          <li>Technology-enabled: GPS-tracked transport, secure communications, and centralized monitoring.</li>
+                          <li>Customer-first service: customizable packages, 24/7 support, and transparent reporting.</li>
+                        </ul>
                       </strong>
                     </p>
                   </section>
