@@ -10,13 +10,15 @@ import fedex from './assets/wallpaper/fedex.jpeg';
 import security1 from './assets/wallpaper/security1.jpg';
 import security_girl1 from './assets/wallpaper/security_girl1.jpg';
 import owner from './assets/wallpaper/owner.jpeg';
-import iguall from './assets/wallpaper/iguall.jpeg';
+import iguall from './assets/wallpaper/iguall.jpg';
 import cctv1 from './assets/wallpaper/cctv1.jpg';
 import kasrawy from './assets/wallpaper/kasrawy.png';
 import cctv2 from './assets/wallpaper/cctv2.jpg';
 import security2 from './assets/wallpaper/security2.jpg';
 import samco from './assets/wallpaper/samco.png';
 import security_girl2 from './assets/wallpaper/security_girl2.jpg';
+import k9 from './assets/wallpaper/k9.jpeg';
+
 
 import React, { useEffect, useState, useRef } from 'react';
 import { useLocation, Routes, Route, Link, HashRouter } from 'react-router-dom';
@@ -49,7 +51,7 @@ import PersonnelGallery from './pages/PersonnelGallery';
 
 const slideshowImages = [
   compound1, innovo, response, compound2, fedex, security1, security_girl1,
-  owner, iguall, cctv1, kasrawy, cctv2, security2, samco, security_girl2
+  owner, iguall, cctv1, kasrawy, cctv2, security2, samco, security_girl2,k9,
 ];
 
 const testText = "→ Security. Safety. Cash Transport.";
@@ -211,13 +213,13 @@ function App() {
                 ? (img === innovo || img === response || img === security1 ||
                   img === security_girl1 || img === security_girl2 || img === iguall || img === kasrawy || img === owner
                   || img === cctv1 || img === cctv2 || img === samco || img === security2 || img === compound1
-                  || img === compound2 || img === fedex
+                  || img === compound2 || img === fedex || img == k9
                   ? "bg-slide active innovo-slide"
                   : "bg-slide active")
                 : (img === innovo || img === response || img === security1 || img === security_girl1
                   || img === security_girl2 || img === iguall || img === kasrawy || img === owner
                   || img === cctv1 || img === cctv2 || img === samco || img === security2 || img === compound1
-                  || img === compound2 || img === fedex
+                  || img === compound2 || img === fedex || img == k9
                   ? "bg-slide innovo-slide"
                   : "bg-slide")
             }
