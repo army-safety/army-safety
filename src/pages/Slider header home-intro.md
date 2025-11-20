@@ -2156,3 +2156,9 @@ check homepage intro at the other pages of the porject to be stateless don't sli
           )
         )}
 
+
+
+
+git commit -m "
+The homepage intro will now only slide up (animate) on the homepage. On all other project pages, it will be stateless and motionless—no slide animation. 
+Reload and check other pages to confirm the intro remains static, while the animation is only on the homepage."
