@@ -522,7 +522,7 @@ transition: transform 10s cubic-bezier(0.4,0,0.2,1), opacity 8s;  transform: tra
 
 /* Header slide-up animation for scroll-hide/show */
 .header-hidden {
-  transform: translateY(-120px);
+  transform: translateY(-350px);
   opacity: 0;
   pointer-events: none;
 }
@@ -534,7 +534,7 @@ transition: transform 10s cubic-bezier(0.4,0,0.2,1), opacity 8s;  transform: tra
   opacity: 1;
 }
 .intro-hidden {
-  transform: translateY(-120px);
+  transform: translateY(-350px);
   opacity: 0;
   pointer-events: none;
 }
