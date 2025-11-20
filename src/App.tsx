@@ -55,8 +55,8 @@ const slideshowImages = [
   owner, iguall, cctv1, kasrawy, cctv2, security2, samco, security_girl2, k9,
 ];
 
-const testText = "→ Security. Safety. Cash Transport.";
-const subText = "Professional protection for institutions, events, and high-value operations.";
+const testText = "→ Security. Safety. Cash. Transport.";
+const subText = "PProfessional surveillance and protection for institutions, events, and high-value operations.";
 
 export function TypewriterTest() {
   const [typedText, setTypedText] = useState("");
