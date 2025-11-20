@@ -21,6 +21,7 @@ import k9 from './assets/wallpaper/k9.jpeg';
 
 import React, { useEffect, useState, useRef } from 'react';
 import BrandsBar from './components/BrandsBar';
+import HomeFeaturesSection from './components/HomeFeaturesSection';
 import { useLocation, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import './pages/EliteSecurityManagement.css';
@@ -361,6 +362,7 @@ function App() {
                 </Routes>
               </main>
               <BrandsBar />
+              <HomeFeaturesSection />
             </>
           ) : (
             <main className="homepage-intro">
@@ -388,7 +390,10 @@ function App() {
           <Route path="/personnel-gallery" element={<PersonnelGallery />} />
         </Routes>
         <footer className="main-footer">
-          &copy; {new Date().getFullYear()} SECHIVE. All rights reserved.
+          <hr className="footer-separator" />
+          <div className="footer-glass">
+            &copy; {new Date().getFullYear()} SECHIVE. All rights reserved.
+          </div>
         </footer>
       </div>
     </div>
