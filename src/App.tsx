@@ -319,58 +319,65 @@ function App() {
           </div>
         </header>
         {showIntro && (
-          <main className={`homepage-intro${showHeader ? '' : ' intro-hidden'}${introAnimated ? ' intro-animated' : ''}`}> 
-            <Routes>
-              <Route path="/" element={
-                <div>
-                  <section className="home-section">
-                    <h2 className="home-section-title">Our Mission</h2>
-                    <p>
-                      <strong>
-                        Welcome to SECHIVE, Egypt's distinguished provider of security, guarding, and money transport services. Our mission is to deliver top-tier, innovative security solutions with unwavering commitment to quality, efficiency, and professionalism. We protect institutions, events, and critical infrastructures with highly qualified teams and advanced technologies.
-                      </strong>
-                    </p>
-                  </section>
-                  <section className="home-section">
-                    <h2 className="home-section-title">Strategic Partnerships</h2>
-                    <p>
-                      <strong>
-                        Serving government, private sector, tourism, malls, healthcare, petroleum, and airports. Trusted by leading organizations across Egypt.
-                      </strong>
-                    </p>
-                  </section>
-                  <section className="home-section">
-                    <h2 className="home-section-title">About Us</h2>
-                    <p>
-                      <strong>
-                        <ul>
-                          <li>Licensed by the Ministry of Interior since 2019</li>
-                          <li>Experienced teams: rigorously trained officers with specialized certifications.</li>
-                          <li>Operational discipline: proven SOPs for high-risk and high-value operations.</li>
-                          <li>Technology-enabled: GPS-tracked transport, secure communications, and centralized monitoring.</li>
-                          <li>Customer-first service: customizable packages, 24/7 support, and transparent reporting.</li>
-                        </ul>
-                      </strong>
-                    </p>
-                  </section>
-                </div>
-              } />
-              <Route path="/elite-security" element={<EliteSecurityManagement />} />
-              <Route path="/quality-innovation" element={<QualityInnovation />} />
-              <Route path="/training-development" element={<TrainingDevelopment />} />
-              <Route path="/company-history" element={<CompanyHistory />} />
-              <Route path="/products-services" element={<ProductAndServices />} />
-              <Route path="/corporate-security" element={<CorporateSecurity />} />
-              <Route path="/industrial-security" element={<IndustrialSecurity />} />
-              <Route path="/event-security" element={<EventSecurity />} />
-              <Route path="/tourism-security" element={<TourismSecurity />} />
-              <Route path="/healthcare-security" element={<HealthcareSecurity />} />
-              <Route path="/monitoring-response" element={<MonitoringResponse />} />
-              <Route path="/security-consulting" element={<SecurityConsulting />} />
-              <Route path="/target-market" element={<TargetMarket />} />
-              <Route path="/current-partnerships" element={<CurrentPartenerShips />} />
-            </Routes>
-          </main>
+          location.pathname === '/' ? (
+            <main className={`homepage-intro${showHeader ? '' : ' intro-hidden'}${introAnimated ? ' intro-animated' : ''}`}>
+              <Routes>
+                <Route path="/" element={
+                  <div>
+                    <section className="home-section">
+                      <h2 className="home-section-title">Our Mission</h2>
+                      <p>
+                        <strong>
+                          Welcome to SECHIVE, Egypt's distinguished provider of security, guarding, and money transport services. Our mission is to deliver top-tier, innovative security solutions with unwavering commitment to quality, efficiency, and professionalism. We protect institutions, events, and critical infrastructures with highly qualified teams and advanced technologies.
+                        </strong>
+                      </p>
+                    </section>
+                    <section className="home-section">
+                      <h2 className="home-section-title">Strategic Partnerships</h2>
+                      <p>
+                        <strong>
+                          Serving government, private sector, tourism, malls, healthcare, petroleum, and airports. Trusted by leading organizations across Egypt.
+                        </strong>
+                      </p>
+                    </section>
+                    <section className="home-section">
+                      <h2 className="home-section-title">About Us</h2>
+                      <p>
+                        <strong>
+                          <ul>
+                            <li>Licensed by the Ministry of Interior since 2019</li>
+                            <li>Experienced teams: rigorously trained officers with specialized certifications.</li>
+                            <li>Operational discipline: proven SOPs for high-risk and high-value operations.</li>
+                            <li>Technology-enabled: GPS-tracked transport, secure communications, and centralized monitoring.</li>
+                            <li>Customer-first service: customizable packages, 24/7 support, and transparent reporting.</li>
+                          </ul>
+                        </strong>
+                      </p>
+                    </section>
+                  </div>
+                } />
+              </Routes>
+            </main>
+          ) : (
+            <main className="homepage-intro">
+              <Routes>
+                <Route path="/elite-security" element={<EliteSecurityManagement />} />
+                <Route path="/quality-innovation" element={<QualityInnovation />} />
+                <Route path="/training-development" element={<TrainingDevelopment />} />
+                <Route path="/company-history" element={<CompanyHistory />} />
+                <Route path="/products-services" element={<ProductAndServices />} />
+                <Route path="/corporate-security" element={<CorporateSecurity />} />
+                <Route path="/industrial-security" element={<IndustrialSecurity />} />
+                <Route path="/event-security" element={<EventSecurity />} />
+                <Route path="/tourism-security" element={<TourismSecurity />} />
+                <Route path="/healthcare-security" element={<HealthcareSecurity />} />
+                <Route path="/monitoring-response" element={<MonitoringResponse />} />
+                <Route path="/security-consulting" element={<SecurityConsulting />} />
+                <Route path="/target-market" element={<TargetMarket />} />
+                <Route path="/current-partnerships" element={<CurrentPartenerShips />} />
+              </Routes>
+            </main>
+          )
         )}
         <Routes>
           <Route path="/logistics" element={<LogisticsGallery />} />
