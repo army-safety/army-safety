@@ -19,9 +19,8 @@ import samco from './assets/wallpaper/samco.png';
 import security_girl2 from './assets/wallpaper/security_girl2.jpg';
 import k9 from './assets/wallpaper/k9.jpeg';
 
-
 import React, { useEffect, useState, useRef } from 'react';
-import { useLocation, Routes, Route, Link, HashRouter } from 'react-router-dom';
+import { useLocation, Routes, Route, Link } from 'react-router-dom';
 import './App.css';
 import './pages/EliteSecurityManagement.css';
 import './pages/QualityInnovation.css';
@@ -51,13 +50,12 @@ import PersonnelGallery from './pages/PersonnelGallery';
 
 const slideshowImages = [
   compound1, innovo, response, compound2, fedex, security1, security_girl1,
-  owner, iguall, cctv1, kasrawy, cctv2, security2, samco, security_girl2,k9,
+  owner, iguall, cctv1, kasrawy, cctv2, security2, samco, security_girl2, k9,
 ];
 
 const testText = "→ Security. Safety. Cash Transport.";
-const subText = " Professional protection for institutions, events, and high-value operations";
+const subText = "Professional protection for institutions, events, and high-value operations.";
 
-// REMOVED export default from here - make it a named export instead
 export function TypewriterTest() {
   const [typedText, setTypedText] = useState("");
   const [typedSubText, setTypedSubText] = useState("");
@@ -66,25 +64,20 @@ export function TypewriterTest() {
   const subTypeIndex = useRef(0);
   
   useEffect(() => {
-    // Reset everything
     setTypedText("");
     setTypedSubText("");
     setShowSubText(false);
     typeIndex.current = 0;
     subTypeIndex.current = 0;
     
-    // Type main text
     const mainInterval = setInterval(() => {
       if (typeIndex.current < testText.length) {
         setTypedText((prev) => prev + testText.charAt(typeIndex.current));
         typeIndex.current++;
       } else {
         clearInterval(mainInterval);
-        // Wait 500ms before starting subtext
         setTimeout(() => {
           setShowSubText(true);
-          
-          // Type subtext
           const subInterval = setInterval(() => {
             if (subTypeIndex.current < subText.length) {
               setTypedSubText((prev) => prev + subText.charAt(subTypeIndex.current));
@@ -92,7 +85,7 @@ export function TypewriterTest() {
             } else {
               clearInterval(subInterval);
             }
-          }, 40); // Faster typing for subtext
+          }, 40);
         }, 500);
       }
     }, 60);
@@ -100,24 +93,22 @@ export function TypewriterTest() {
     return () => clearInterval(mainInterval);
   }, []);
   
-    return (
-      <div className="typewriter-test-container">
-        <div className="typewriter-main-line">
-          <span className="typewriter-test-text">
-            {typedText}
+  return (
+    <div className="typewriter-test-container">
+      <div className="typewriter-main-line">
+        <span className="typewriter-test-text">
+          {typedText}
+        </span>
+      </div>
+      {showSubText && (
+        <div className="typewriter-subtext-line">
+          <span className="typewriter-subtext">
+            {typedSubText}
           </span>
         </div>
-
-        {showSubText && (
-          <div className="typewriter-subtext-line">
-            <span className="typewriter-subtext">
-              {typedSubText}
-            </span>
-          </div>
-        )}
-      </div>
-    );
-
+      )}
+    </div>
+  );
 }
 
 function App() {
@@ -157,7 +148,6 @@ function App() {
     }
   }, [location.pathname, showIntro]);
 
-  // List of routes that should show the intro glass section
   const introRoutes = [
     '/',
     '/elite-security',
@@ -213,13 +203,13 @@ function App() {
                 ? (img === innovo || img === response || img === security1 ||
                   img === security_girl1 || img === security_girl2 || img === iguall || img === kasrawy || img === owner
                   || img === cctv1 || img === cctv2 || img === samco || img === security2 || img === compound1
-                  || img === compound2 || img === fedex || img == k9
+                  || img === compound2 || img === fedex || img === k9
                   ? "bg-slide active innovo-slide"
                   : "bg-slide active")
                 : (img === innovo || img === response || img === security1 || img === security_girl1
                   || img === security_girl2 || img === iguall || img === kasrawy || img === owner
                   || img === cctv1 || img === cctv2 || img === samco || img === security2 || img === compound1
-                  || img === compound2 || img === fedex || img == k9
+                  || img === compound2 || img === fedex || img === k9
                   ? "bg-slide innovo-slide"
                   : "bg-slide")
             }
@@ -333,8 +323,8 @@ function App() {
                       <strong>
                         <ul>
                           <li>Licensed by the Ministry of Interior since 2019</li>
-                          <li>Experienced teams: rigorously trained officers with specialized certifications. </li>
-                          <li>Operational discipline: proven SOPs for high-risk and high-value operations.    </li>
+                          <li>Experienced teams: rigorously trained officers with specialized certifications.</li>
+                          <li>Operational discipline: proven SOPs for high-risk and high-value operations.</li>
                           <li>Technology-enabled: GPS-tracked transport, secure communications, and centralized monitoring.</li>
                           <li>Customer-first service: customizable packages, 24/7 support, and transparent reporting.</li>
                         </ul>
@@ -372,5 +362,4 @@ function App() {
   );
 }
 
-// Only ONE default export - the App component
 export default App;

@@ -362,8 +362,7 @@ body, .homepage-intro, .glass-feature-container, h1, h2, h3, h4, h5, h6, p, ul, 
   margin: 2em 0 2.5em 0;
   z-index: 2;
   overflow: hidden;
-  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
-  transform: translateY(0);
+transition: transform 10s cubic-bezier(0.4,0,0.2,1), opacity 8s;  transform: translateY(0);
   opacity: 1;
 }
 
@@ -437,7 +436,7 @@ body, .homepage-intro, .glass-feature-container, h1, h2, h3, h4, h5, h6, p, ul, 
   border-bottom: 3px solid #38bdf8;
   box-shadow: 0 2px 16px #0006;
   border-radius: 0 0 18px 18px;
-  transition: transform 0.4s cubic-bezier(0.4,0,0.2,1), opacity 0.3s;
+  transition: transform 10s cubic-bezier(0.4,0,0.2,1), opacity 8s;
   transform: translateY(0);
   opacity: 1;
 }
