@@ -117,6 +117,7 @@ function App() {
   const [showHeader, setShowHeader] = useState(true);
   const [showIntro, setShowIntro] = useState(false);
   const [initialAnimation, setInitialAnimation] = useState(false);
+  const [introAnimated, setIntroAnimated] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(window.scrollY);
   const [showWelcome, setShowWelcome] = useState(true);
   const typewriterText = "Welcome to SECHIVE — Secure Your World";
@@ -176,14 +177,17 @@ function App() {
     if (location.pathname === '/' && showIntro) {
       setShowHeader(false);
       setInitialAnimation(true);
+      setIntroAnimated(false);
       const timer = setTimeout(() => {
         setShowHeader(true);
         setInitialAnimation(false);
+        setIntroAnimated(true);
       }, 1200); // match CSS transition duration
       return () => clearTimeout(timer);
     } else {
       setShowHeader(true);
       setInitialAnimation(false);
+      setIntroAnimated(false);
     }
   }, [location.pathname, showIntro]);
 
@@ -315,7 +319,7 @@ function App() {
           </div>
         </header>
         {showIntro && (
-          <main className={`homepage-intro${showHeader ? '' : ' intro-hidden'}`}> 
+          <main className={`homepage-intro${showHeader ? '' : ' intro-hidden'}${introAnimated ? ' intro-animated' : ''}`}> 
             <Routes>
               <Route path="/" element={
                 <div>

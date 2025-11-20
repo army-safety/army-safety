@@ -1,3 +1,33 @@
+/* Make the gallery link button extra small and compact */
+/* Center the gallery link button at the top of the intro-content */
+.gallery-link-btn {
+  font-size: 0.75em;
+  font-weight: 600;
+  padding: 0.32em 1.2em;
+  border-radius: 6px;
+  margin: 0.12em auto 0.12em auto;
+  min-width: 180px;
+  max-width: 320px;
+  white-space: nowrap;
+  display: block;
+  text-align: center;
+  position: static !important;
+}
+
+@media (max-width: 600px) {
+  .gallery-link-btn {
+    font-size: 0.65em;
+    padding: 0.22em 0.7em;
+    border-radius: 5px;
+    margin: 0.08em 0;
+    min-width: 140px;
+    max-width: 240px;
+  }
+}
+/* Move the Logistics & Equipment Gallery title down so it doesn't overlap with the button */
+.intro-content h2 {
+  margin-top: 2.5em;
+}
 .gallery-link-btn {
   display: inline-block;
   background: #38bdf8;

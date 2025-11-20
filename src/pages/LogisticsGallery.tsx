@@ -65,7 +65,14 @@ const logisticsImages = [
 
 export default function LogisticsGallery() {
   return (
-    <div className="intro-content">
+    <div className="intro-content" style={{ position: 'relative' }}>
+      <Link
+        to="/personnel-gallery"
+        className="gallery-link-btn"
+        style={{ position: 'absolute', top: 0, right: 0, margin: '1em', zIndex: 2 }}
+      >
+        View Security Guard Gallery
+      </Link>
       <h2>Logistics & Equipment Gallery</h2>
       <p>Browse our selection of security uniforms, shoes, and gear.</p>
       <div className="logistics-gallery-grid">
@@ -75,11 +82,6 @@ export default function LogisticsGallery() {
             <div className="logistics-gallery-caption">{img.alt}</div>
           </div>
         ))}
-      </div>
-      <div style={{ textAlign: 'center', margin: '2em 0' }}>
-        <Link to="/personnel-gallery" className="gallery-link-btn">
-          View Security Personnel Gallery
-        </Link>
       </div>
     </div>
   );
