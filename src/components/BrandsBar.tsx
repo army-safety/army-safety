@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useState } from "react";
 import "./BrandsBar.css";
+import BrandGalleryModal from "./BrandGalleryModal";
 
 import kasrawy from "../assets/brands/kasrawy.png";
 import sallab from "../assets/brands/Sallab.png";
@@ -38,13 +39,27 @@ const brandLogos = [
 ];
 
 export default function BrandsBar() {
+  const [modalOpen, setModalOpen] = useState(false);
+  const [modalIndex, setModalIndex] = useState(0);
+
+  const openModal = idx => {
+    setModalIndex(idx);
+    setModalOpen(true);
+  };
+  const closeModal = () => setModalOpen(false);
+
   return (
-    <div className="brands-bar-glass">
-      {brandLogos.map((logo, idx) => (
-        <div className="brand-logo-container" key={idx}>
-          <img src={logo.src} alt={logo.alt} className="brand-logo-img" />
-        </div>
-      ))}
-    </div>
+    <>
+      <div className="brands-bar-glass">
+        {brandLogos.map((logo, idx) => (
+          <div className="brand-logo-container" key={idx} onClick={() => openModal(idx)} style={{ cursor: 'pointer' }}>
+            <img src={logo.src} alt={logo.alt} className="brand-logo-img" />
+          </div>
+        ))}
+      </div>
+      {modalOpen && (
+        <BrandGalleryModal logos={brandLogos} initialIndex={modalIndex} onClose={closeModal} />
+      )}
+    </>
   );
 }

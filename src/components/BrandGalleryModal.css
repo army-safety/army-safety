@@ -1,0 +1,83 @@
+.brand-gallery-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.65);
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-gallery-modal {
+  background: rgba(255,255,255,0.98);
+  border-radius: 18px;
+  box-shadow: 0 8px 32px #0008;
+  padding: 2em 2em 1em 2em;
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.brand-gallery-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+}
+
+.brand-gallery-img {
+  max-width: 340px;
+  max-height: 340px;
+  border-radius: 16px;
+  background: #fff;
+  box-shadow: 0 2px 16px #0002;
+}
+
+.brand-gallery-arrow {
+  font-size: 2.2em;
+  background: none;
+  border: none;
+  color: #38bdf8;
+  cursor: pointer;
+  padding: 0.2em 0.5em;
+  border-radius: 8px;
+  transition: background 0.2s;
+}
+.brand-gallery-arrow:hover {
+  background: #e0f7fa;
+}
+
+.brand-gallery-close {
+  position: absolute;
+  top: 0.5em;
+  right: 1em;
+  font-size: 2em;
+  background: none;
+  border: none;
+  color: #333;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.brand-gallery-caption {
+  margin-top: 1em;
+  font-size: 1.1em;
+  color: #222;
+  text-align: center;
+}
+
+@media (max-width: 600px) {
+  .brand-gallery-modal {
+    padding: 1em 0.2em 0.5em 0.2em;
+  }
+  .brand-gallery-img {
+    max-width: 90vw;
+    max-height: 40vh;
+  }
+  .brand-gallery-content {
+    gap: 0.7em;
+  }
+}

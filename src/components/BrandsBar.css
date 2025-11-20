@@ -29,12 +29,12 @@
 }
 
 .brand-logo-img {
-  max-width: 64px;
-  max-height: 64px;
+  max-width: 110px;
+  max-height: 110px;
   object-fit: contain;
   border-radius: 8px;
   background: #fff;
-  padding: 4px;
+  padding: 8px;
 }
 
 @media (max-width: 600px) {
@@ -43,13 +43,14 @@
     padding: 0.7em 0.3em;
   }
   .brand-logo-img {
-    max-width: 44px;
-    max-height: 44px;
-    padding: 2px;
+    max-width: 70px;
+    max-height: 70px;
+    padding: 4px;
   }
   .brand-logo-container {
     min-width: 48px;
     min-height: 48px;
     padding: 0.2em;
+    border-radius: 12px;
   }
 }
